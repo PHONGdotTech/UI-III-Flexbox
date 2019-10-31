@@ -64,3 +64,209 @@ h1, h2, h3, h4, h5 {
 }
 
 /* Copy and paste your work from yesterday here and start to refactor into flexbox */
+
+container {
+	width: 900px;
+	text-align: center;
+}
+
+h1 {
+	font-size: 80px;
+}
+
+h2 {
+	font-size: 60px;
+}
+
+h3 {
+	font-size: 40px;
+}
+
+h4 {
+	font-size: 20px;
+}
+
+section, header, footer, container {
+	display: block;
+	margin: auto;
+}
+
+header nav {
+	width: 900px;
+	position: fixed;
+	background: linear-gradient(to bottom, #0066cc, white);
+	text-align: center;
+	height: 7%;
+	/* Added 3 flexbox properties and values in accordance to UI-III-flexbox project */
+	display: flex;
+	align-items: center;
+	justify-content: space-evenly;
+}
+
+header nav *{
+	color: black;
+	margin: 0 3%;
+	text-decoration: none;
+	margin: 0;
+}
+
+
+/* Begin section sloganSection */
+.sloganSection {
+	padding-top: 5%;
+	display: flex; /* Added this line to align sloganSection stuff */
+	justify-content: center;
+	align-items: center;
+}
+
+.sloganSection textSection, imgSection {
+	/* display: inline-block; */ /*No longer needed by adding display:flex to parent sloganSection*/
+	text-align: center;
+	margin: 5%;
+}
+
+.sloganSection textSection {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-evenly;
+	align-items: center;
+}
+
+.button{
+	border: solid 1px black;
+	color: black;
+	margin: 1%;
+	width: 150px;
+	height: 30px;
+	text-align: center;
+	text-decoration: none;
+	background: white;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.button:hover{
+	background: grey;
+}
+
+/* End section sloganSection */
+
+/*Begin section contentStuff */
+
+.contentStuff {
+	border-top: solid black 2px;
+	border-bottom: solid black 1px;
+	padding: 2% 0;
+}
+
+.content1, .content2, .content3{
+	/* display:inline-block; */ /*No longer needed by adding display:flex to these classes */
+	padding: 3% 0;
+	width: 100%;
+	display: flex; /* added this line align ALL items within these classes */
+}
+
+.contentStuff .content1 section{
+	text-align: left;
+	/* display: inline-block; */ /*No longer needed because display:flex was added to parent class*/
+	width: 49.8%;
+}
+
+.contentStuff img {
+	width: 100%;
+}
+
+.contentStuff .content3 section{
+	text-align: left;
+	/* display: inline-block; */ /*No longer needed because display:flex was added to parent class*/
+	margin: 0;
+	width: 33%;
+}
+
+/* End section contentStuff */
+
+/* Begin section contactSection */
+
+.contactSection { /*anything added in this section WILL flex below the contact information */
+	padding: 2% 0;
+	display: flex; /* Unnecessary because HTML already formatted, but added anyways */
+	flex-direction: column; /* Unnecessary because HTML already formatted, but added anyways */
+	text-align: left;
+}
+
+/* End section contactSection */
+
+/* Begin section footer */
+footer {
+	text-align: center;
+	padding: 3% 0;
+	background: linear-gradient(to top, #0066cc, white);
+}
+/* End section footer */
+
+/* End index.html specific CSS */
+
+/* Begins the services.html specific CSS */
+
+.servicesSloganSection{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-evenly;
+}
+
+.servicesSloganSection imgSection, .services-header-img{
+	width: 100%;
+}
+
+.servicesSloganSection textSection{
+	text-align: left;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	padding: 2% 0;
+}
+
+.servicesContentStuff {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-content: space-between;
+}
+
+.servicesContentStuff div {
+	text-align: left;
+	width: 48%;
+	margin: 2% 0;
+	padding: 2%;
+	border: solid black 1px;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	justify-content: space-around;
+	background: lightgrey;
+}
+
+.servicesContentStuff div h4,p,a{
+	padding: 1%;
+}
+
+.facts {
+	text-align: left;
+	display:flex;
+	justify-content: space-between;
+}
+
+.facts div{
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	padding: 5% 0;
+	width: 48%;
+}
+
+.services-info-img {
+	width: 100%;
+}
